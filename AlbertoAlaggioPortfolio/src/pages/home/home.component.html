@@ -1,0 +1,8 @@
+
+<div class="container">
+    <div *ngFor="let elem of imagesArray">
+        <img [src]="'assets/img/' + elem.src" alt="" *ngIf="elem.index == currenIndex" width="50%">
+    </div>
+    <button (click)="stopScrollingImg()"></button>
+</div>
+

@@ -3,3 +3,24 @@
     display: flex;
     justify-content: center;
 }
+
+.name{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 200px;
+    left: 100px;
+    z-index: 99;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.mt-100{
+ margin-top: 100px ;
+}

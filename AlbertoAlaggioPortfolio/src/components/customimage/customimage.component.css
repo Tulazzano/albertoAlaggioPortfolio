@@ -1,0 +1,13 @@
+.image{  
+    opacity: 1;  
+    transition: 0.5s all ease-out;
+}  
+
+.image.active{
+    opacity: 0;
+}
+
+
+
+
+

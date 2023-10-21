@@ -1,8 +1,24 @@
 
+<div class="name">
+    <h1>
+        Alberto
+    </h1>
+    <h1>
+        Alaggio
+    </h1>
+</div>
+
+
+<div>
+    <button (click)="autoSwitchImages()">CLICK ME</button>
+</div>
 <div class="container">
-    <div *ngFor="let elem of imagesArray">
-        <img [src]="'assets/img/' + elem.src" alt="" *ngIf="elem.index == currenIndex" width="50%">
+
+    <div class="w-80 mt-100" >
+        <div *ngFor="let elem of imagesArray">
+            <customimage class="w-100" [src]="'assets/img/' + elem.src" *ngIf="elem.index == currenIndex"></customimage>
+        </div>       
     </div>
-    <button (click)="stopScrollingImg()"></button>
+    
 </div>
 

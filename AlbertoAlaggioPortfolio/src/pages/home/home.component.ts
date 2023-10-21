@@ -18,11 +18,12 @@ export class Images {
 })
 export class HomeComponent implements OnInit ,OnDestroy{
 
-  public numberOfImages = 29;
+  public numberOfImages = 5;
   public currenIndex = 1;
   public imagesArray = new Array<Images>();
-  public int = interval(1000);
+  public int = interval(4000);
   public subscription: any;
+  public isNowScrolling = true;
   
   public createImgArray(length : number){
     for(let i = 0; i < length ; i++){
@@ -32,11 +33,20 @@ export class HomeComponent implements OnInit ,OnDestroy{
     }
   }
 
+  autoSwitchImages(){
+    if(this.isNowScrolling){
+      this.stopScrollingImg();
+    }else{
+      this.startScrollingImg();
+    }
+    this.isNowScrolling = !this.isNowScrolling;
+  }
+
   public stopScrollingImg(){
     this.subscription.unsubscribe()
   }
 
-  ngOnInit(): void {
+  public startScrollingImg(){
     this.subscription = this.int.subscribe(
       () => {
         if(this.currenIndex == this.numberOfImages -1){
@@ -46,7 +56,10 @@ export class HomeComponent implements OnInit ,OnDestroy{
         }
       }
     )
-    this.stopScrollingImg()
+  }
+
+  ngOnInit(): void {
+    this.startScrollingImg()
   }
 
   ngOnDestroy(): void {

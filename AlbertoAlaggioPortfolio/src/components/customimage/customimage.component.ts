@@ -8,6 +8,7 @@ import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/cor
 export class CustomimageComponent implements AfterViewInit {
 
   @Input() src: string | undefined;
+  @Input() isNowScrolling: boolean | undefined;
 
   @ViewChild('activeImg') activeImg: any;
 
@@ -15,14 +16,18 @@ export class CustomimageComponent implements AfterViewInit {
 
     this.activeImg.nativeElement.className = "image active"
     setInterval(() => {
-    this.activeImg.nativeElement.className = "image "
-    setInterval(() => this.activeImg.nativeElement.className = "image active", 3000)
-  }, 500)
+      this.activeImg.nativeElement.className = "image "
+      setInterval(() => {
+        if (this.isNowScrolling) {
+          this.activeImg.nativeElement.className = "image active"
+        }
+      }, 3000)
+    }, 500)
   }
 
   ngAfterViewInit(): void {
+
     this.seeImage()
   }
-
 }
 

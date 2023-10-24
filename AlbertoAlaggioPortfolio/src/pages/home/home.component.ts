@@ -37,7 +37,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.isNowScrolling) {
       this.stopScrollingImg();
     } else {
-      this.startScrollingImg();
+      if (this.currenIndex == this.numberOfImages - 1) {
+        this.currenIndex = 0;
+      } else {
+        this.currenIndex++;
+      }
+      this.startScrollingImg();    
     }
     this.isNowScrolling = !this.isNowScrolling;
   }

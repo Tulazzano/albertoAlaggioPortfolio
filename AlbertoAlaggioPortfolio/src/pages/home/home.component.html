@@ -1,10 +1,10 @@
-<div class="h-100 col justify-end pb-15-px">
+<div class="h-100 col justify-end ">
     <div class="w-100 flex justify-center pb-3-px">
-        <h1 class="bold font-13 text-center">ALBERTO ALAGGIO</h1>
+        <h1 class="bold font-20 text-center">ALBERTO ALAGGIO</h1>
     </div>
-    <div class="w-100 flex justify-center">
+    <!-- <div class="w-100 flex justify-center">
         <h2 class="font-10 text-center">REPRESENTED BY ARTALENTS, MILAN, ITALY</h2>
-    </div>
+    </div> -->
 </div>
 
 <div class="bio-container" (click)="openBio()">
@@ -21,7 +21,7 @@
 <div class="imgs-container">
     <div class="w-80 mt-100" (click)="autoSwitchImages()">
         <div *ngFor="let elem of imagesArray">
-            <customimage class="w-100" [src]="'assets/img/' + elem.src" *ngIf="elem.index == currenIndex"></customimage>
+            <customimage [isNowScrolling]="isNowScrolling" class="w-100" [src]="'assets/img/' + elem.src" *ngIf="elem.index == currenIndex"></customimage>
         </div>       
     </div>   
 </div>
@@ -46,10 +46,10 @@
     </ul>
 </div>
 
-<div class="w-100 bottom-0">
+<div class="w-100 ">
     <div class="w-100 flex justify-between px-10-px pb-15-px">
-        <div class="bold font-13 max-w-content" (click)="openBio()">ABOUT</div>
-        <div class="bold font-13 max-w-content" (click)="openContacts()">CONTACTS</div>
+        <h2 class="bold font-10 text-center">REPRESENTED BY ARTALENTS, MILAN, ITALY</h2>
+        <div class="font-10 " ><span class="bold" (click)="openBio()">ABOUT</span> | <span class="bold" (click)="openContacts()">CONTACTS</span></div>
     </div>
 
 </div>

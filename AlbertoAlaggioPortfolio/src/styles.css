@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: "Gotham";
-    src: local("Gotham"), url(./assets/fonts/MoonlitNightJNL.otf) format("truetype");
+    src: local("Gotham"), url(./assets/fonts/Gotham-Bold.otf) format("truetype");
     font-weight: 900;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: local("Gotham"), url(./assets/fonts/Gotham-Light.otf) format("truetype");
+    font-weight: 300;
 }
 
 
@@ -11,10 +17,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Gotham;
-    font-weight: 900;
+    font-weight: 300;
 }
-
-
 
 body {
     max-width: 100%;
@@ -26,5 +30,30 @@ html{
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: black;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+@keyframes contactFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes bioFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

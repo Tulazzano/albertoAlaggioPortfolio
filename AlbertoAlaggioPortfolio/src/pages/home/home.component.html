@@ -1,24 +1,55 @@
-
-<div class="name">
-    <h1>
-        Alberto
-    </h1>
-    <h1>
-        Alaggio
-    </h1>
+<div class="h-100 col justify-end pb-15-px">
+    <div class="w-100 flex justify-center pb-3-px">
+        <h1 class="bold font-13 text-center">ALBERTO ALAGGIO</h1>
+    </div>
+    <div class="w-100 flex justify-center">
+        <h2 class="font-10 text-center">REPRESENTED BY ARTALENTS, MILAN, ITALY</h2>
+    </div>
 </div>
 
-
-<div>
-    <button (click)="autoSwitchImages()">CLICK ME</button>
+<div class="bio-container" (click)="openBio()">
+    <div class="bio font-13 text-center line-height">
+        <h1 class="bold font-13 text-center">ABOUT</h1>
+        Always passionate about fashion and photography, after his studies in cultural anthropology at the University of Turin, Alberto – born 1993 – 
+        began traveling to Asia alone, backpacking with his camera in hand.<br> On his return he settled in Milan, where he began to publish documentary and
+        fashion projects on various internationally renowned magazines. His works are characterized by a balanced dualism between reportage and fashion,
+        analogue photography and digital photography, with an eye towards geometry and the static nature of the subjects he photographs.<br> Alberto always tries
+        to keep his eye trained, traveling the world to discover places never seen before and seeking his inspiration from the journey itself.
+    </div>
 </div>
-<div class="container">
 
-    <div class="w-80 mt-100" >
+<div class="imgs-container">
+    <div class="w-80 mt-100" (click)="autoSwitchImages()">
         <div *ngFor="let elem of imagesArray">
             <customimage class="w-100" [src]="'assets/img/' + elem.src" *ngIf="elem.index == currenIndex"></customimage>
         </div>       
-    </div>
-    
+    </div>   
 </div>
 
+<div class="contacts-container" (click)="openContacts()">
+    <ul class="contacts">
+        <li class="bold font-13"> 
+            CONTACTS
+        </li>
+        <li class="font-13">
+            info@artalents.it
+        </li>
+        <li class="font-13">
+           albertoalaggio@hotmail.it
+        </li>
+        <li class="font-13">
+            +39 0258437821
+        </li>
+        <li class="font-13">
+            +39 3911174061
+        </li>
+    </ul>
+</div>
+
+<div class="w-100 bottom-0">
+    <div class="w-100 flex justify-between px-10-px pb-15-px">
+        <div class="bold font-13 max-w-content" (click)="openBio()">ABOUT</div>
+        <div class="bold font-13 max-w-content" (click)="openContacts()">CONTACTS</div>
+    </div>
+
+</div>

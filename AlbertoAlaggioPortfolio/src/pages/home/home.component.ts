@@ -18,7 +18,7 @@ export class Images {
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  public numberOfImages = 5;
+  public numberOfImages = 2;
   public currenIndex = 1;
   public imagesArray = new Array<Images>();
   public int = interval(4000);

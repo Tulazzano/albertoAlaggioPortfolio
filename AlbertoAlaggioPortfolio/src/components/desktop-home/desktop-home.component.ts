@@ -12,11 +12,11 @@ export class Images {
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'desktop-home',
+  templateUrl: './desktop-home.component.html',
+  styleUrls: ['./desktop-home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewChecked, OnDestroy {
+export class DesktopHomeComponent {
 
   public numberOfImages = 28;
   public currenIndex = 0;
@@ -115,13 +115,7 @@ export class HomeComponent implements OnInit, AfterViewChecked, OnDestroy {
 
 
   ngOnInit(): void {
-    var w = window.innerWidth;
-    console.log(w)
     this.startScrollingImg();
-    const imgBtn: HTMLElement | null = document.querySelector('#imgBtn');
-    imgBtn!.addEventListener('pointerdown', () => this.autoSwitchImages(), false);
-    imgBtn!.addEventListener('pointerup', () => this.autoSwitchImages(), false);
-    //imgBtn!.addEventListener('contextmenu', event => event.preventDefault());
   }
 
   ngOnDestroy(): void {
@@ -130,12 +124,8 @@ export class HomeComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   ngAfterViewChecked(): void {
     if (this.imgContainer.nativeElement.clientHeight > 200) {
-      const top = this.imgContainer.nativeElement.offsetTop
       const imgCont: HTMLElement | null = document.getElementById('imgCont');
-      const imgBtn: HTMLElement | null = document.getElementById('imgBtn');
       imgCont!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-      imgBtn!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-      imgBtn!.style.setProperty('top', top.toString() + 'px');
     }
 
   }
@@ -143,5 +133,4 @@ export class HomeComponent implements OnInit, AfterViewChecked, OnDestroy {
   constructor() {
     this.createImgArray(this.numberOfImages)
   }
-
 }

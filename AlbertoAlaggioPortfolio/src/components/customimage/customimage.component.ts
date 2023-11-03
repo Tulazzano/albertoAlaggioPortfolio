@@ -21,7 +21,7 @@ export class CustomimageComponent implements AfterViewInit {
         if (this.isNowScrolling) {
           this.activeImg.nativeElement.className = "image active"
         }
-      }, 3000)
+      }, 2030)
     }, 500)
   }
 

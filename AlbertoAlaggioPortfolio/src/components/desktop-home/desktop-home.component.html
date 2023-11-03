@@ -1,9 +1,4 @@
-<div class="relative" >
-  <div class="h-100-sm col justify-end align-center">
-    <div class="w-30-80-sm flex justify-center pb-3-px">
-      <img src="assets/img/albertoalaggio.jpg" alt="" width="100%">
-    </div>
-  </div>
+<div class="relative">
 
   <div class="bio-container" (click)="openBio()">
     <div class="bio font-13 text-center line-height">
@@ -41,28 +36,20 @@
     </ul>
   </div>
 
-  <div class="flex-center">
-    <div id="imgBtn" class="img-btn not-menu">
-
-    </div>
-  
-    <div id="imgCont" class="imgs-container not-menu" #imgContainer>
-      <div class="w-30-80-sm mt-100">
-        <div *ngFor="let elem of imagesArray">
-          <customimage [isNowScrolling]="isNowScrolling" class="w-100" [src]="'assets/img/' + elem.src"
-            *ngIf="elem.index == currenIndex"></customimage>
-        </div>
+  <div id="imgCont" class="imgs-container" #imgContainer>
+    <div class="w-80 mt-100">
+      <div *ngFor="let elem of imagesArray">
+        <customimage [isNowScrolling]="isNowScrolling" class="w-100" [src]="'assets/img/' + elem.src"
+          *ngIf="elem.index == currenIndex"></customimage>
       </div>
     </div>
-  </div> 
+  </div>
 
-  <div class="w-100 flex-center">
-    <div class="w-30-80-sm flex justify-between pb-15-px">
+  <div class="w-100 ">
+    <div class="w-100 flex justify-between px-10-px pb-15-px">
       <h2 class="bold font-10 text-center">REPRESENTED BY ARTALENTS, MILAN, ITALY</h2>
-      <div class="font-10 "><span (click)="openBio()" class="pointer">ABOUT</span> | <span (click)="openContacts()" class="pointer">CONTACTS</span>
+      <div class="font-10 "><span (click)="openBio()">ABOUT</span> | <span (click)="openContacts()">CONTACTS</span>
       </div>
     </div>
-
   </div>
 </div>
-<!-- <desktop-home *ngIf="!isSmartphone"></desktop-home> -->

@@ -3,7 +3,7 @@
 }
 
 .w-30-80-sm{
-    width: 28%;
+    width: 30%;
 }
 
 .h-100-sm{
@@ -72,8 +72,8 @@
     font-size: 13px;
 }
 
-.font-14{
-    font-size: 12px;
+.font-10{
+    font-size: 8px;
 }
 
 .bottom-0{
@@ -104,12 +104,12 @@
 .contacts-container {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 99998;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 30vw;
+    width: 100vw;
     background-color: white;
     color: black;
     transform: translateX(100%);
@@ -129,7 +129,6 @@
 .flex-center{
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100vw;
 }
 
@@ -146,7 +145,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 30vw;
+    width: 100vw;
     background-color: white;
     color: black;
     transform: translateX(-100%);
@@ -155,6 +154,33 @@
     -o-transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
 }
+
+
+@media screen and (max-width:700px) {
+
+    .w-30-80-sm{
+        width: 80%;
+    }
+
+    .w-80-sm{
+        width: 80%;
+    }
+
+    .h-100-sm{
+        height: 100px;
+    }
+
+    .img-btn{
+        position: absolute;
+        width: 100%;
+        z-index: 99997;
+    }
+
+    .imgs-container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
 
     .contacts {
         position: absolute;
@@ -191,7 +217,7 @@
 
     .bio {
         position: absolute;
-        left: 0px;
+        right: 0px;
         height: 10vh;
         top: 0px;
         display: flex;
@@ -226,4 +252,4 @@
         transition: transform 0.5s ease-in;
     }
 
-
+}

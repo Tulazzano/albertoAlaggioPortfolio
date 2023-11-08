@@ -12,11 +12,11 @@ export class Images {
 }
 
 @Component({
-  selector: 'desktop-home',
-  templateUrl: './desktop-home.component.html',
-  styleUrls: ['./desktop-home.component.css']
+  selector: 'mobile-home',
+  templateUrl: './mobile-home.component.html',
+  styleUrls: ['./mobile-home.component.css']
 })
-export class DesktopHomeComponent {
+export class MobileHomeComponent {
 
   public numberOfImages = 28;
   public currenIndex = 0;
@@ -121,7 +121,7 @@ export class DesktopHomeComponent {
     const imgBtn: HTMLElement | null = document.querySelector('#imgBtn');
     imgBtn!.addEventListener('pointerdown', () => this.autoSwitchImages(), false);
     imgBtn!.addEventListener('pointerup', () => this.autoSwitchImages(), false);
-    //imgBtn!.addEventListener('contextmenu', event => event.preventDefault());
+    imgBtn!.addEventListener('contextmenu', event => event.preventDefault());
   }
 
   ngOnDestroy(): void {
@@ -143,4 +143,5 @@ export class DesktopHomeComponent {
   constructor() {
     this.createImgArray(this.numberOfImages)
   }
+
 }

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { CustomimageComponent } from '../components/customimage/customimage.component';
-import { DesktopHomeComponent } from 'src/components/desktop-home/desktop-home.component';
+import { DesktopHomeComponent } from '../components/desktop-home/desktop-home.component';
+import { MobileHomeComponent } from '../components/mobile-home/mobile-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    MobileHomeComponent,
     DesktopHomeComponent,
     CustomimageComponent
   ],

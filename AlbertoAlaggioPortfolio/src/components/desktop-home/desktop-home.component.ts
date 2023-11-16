@@ -29,6 +29,12 @@ export class DesktopHomeComponent {
 
   @ViewChild('imgContainer') imgContainer: any;
 
+  @HostListener('window:resize', ['$event'])
+	onResize(event : any) {
+    console.log(event)
+		this.calculatePosition()
+	}
+
   public createImgArray(length: number) {
     for (let i = 0; i < length; i++) {
       this.imagesArray.push(
@@ -128,14 +134,21 @@ export class DesktopHomeComponent {
     this.stopScrollingImg();
   }
 
+  calculatePosition(){
+
+    const top = this.imgContainer.nativeElement.offsetTop
+    const imgCont: HTMLElement | null = document.getElementById('imgCont');
+    const imgBtn: HTMLElement | null = document.getElementById('imgBtn');
+    imgCont!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
+    imgBtn!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
+    imgBtn!.style.setProperty('top', top.toString() + 'px');
+    console.log(this.imgContainer.nativeElement.clientHeight)
+
+  }
+
   ngAfterViewChecked(): void {
     if (this.imgContainer.nativeElement.clientHeight > 200) {
-      const top = this.imgContainer.nativeElement.offsetTop
-      const imgCont: HTMLElement | null = document.getElementById('imgCont');
-      const imgBtn: HTMLElement | null = document.getElementById('imgBtn');
-      imgCont!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-      imgBtn!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-      imgBtn!.style.setProperty('top', top.toString() + 'px');
+     this.calculatePosition()
     }
 
   }

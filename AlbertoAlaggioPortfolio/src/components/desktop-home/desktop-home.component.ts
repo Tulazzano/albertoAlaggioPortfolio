@@ -37,8 +37,9 @@ export class DesktopHomeComponent {
 
   public createImgArray(length: number) {
     for (let i = 0; i < length; i++) {
+      let num = i + 1;
       this.imagesArray.push(
-        new Images(i, i + '.JPG')
+        new Images(i, num + '.JPG')
       )
     }
   }

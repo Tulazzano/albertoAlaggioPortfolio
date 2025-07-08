@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   ngOnInit(): void {
     var w = window.innerWidth;
-    this.mobile = w < 700
+    this.mobile = w < 500
   }
 
   ngOnDestroy(): void {

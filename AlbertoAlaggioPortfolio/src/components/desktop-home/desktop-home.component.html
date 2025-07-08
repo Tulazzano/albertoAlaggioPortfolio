@@ -1,27 +1,27 @@
 <div class="relative" >
   <div class="col-center">
-    <div class="h-100-sm col justify-end align-center">
+    <div class="h-5-vh col justify-end align-center">
       <div class="w-calc flex justify-center pb-3-px">
         <img src="assets/img/albertoalaggio.jpg" alt="" width="100%">
       </div>
     </div>
   
-    <div class="flex-center">
-      <div id="imgBtn" class="img-btn not-menu">
+    <div class="flex-center h-90-vh">
+      <div id="imgBtn" class="img-btn not-menu h-90-vh">
   
       </div>
     
-      <div id="imgCont" class="imgs-container not-menu" #imgContainer>
-        <div class="w-calc mt-100">
+      <div id="imgCont" class="imgs-container not-menu h-90-vh" #imgContainer>
+        <div class="w-calc mt-100  h-90-vh">
           <div *ngFor="let elem of imagesArray">
-            <customimage [isNowScrolling]="isNowScrolling" class="w-100" [src]="'assets/img/' + elem.src"
+            <customimage [isNowScrolling]="isNowScrolling" class="w-100 h-90-vh" [src]="'assets/img/' + elem.src"
               *ngIf="elem.index == currenIndex"></customimage>
           </div>
         </div>
       </div>
     </div> 
   
-    <div class="w-100 flex-center">
+    <div class="w-100 flex-center-2 h-5-vh">
       <div class="w-calc flex justify-between pb-15-px">
         <h2 class="bold font-14 text-center">REPRESENTED BY ARTALENTS, MILAN, ITALY</h2>
         <div class="font-14 "><span (click)="openBio()" class="pointer">ABOUT</span> | <span (click)="openContacts()" class="pointer">CONTACTS</span>
@@ -32,9 +32,9 @@
   
 
   <div class="bio-container" (click)="openBio()">
-    <div class="bio font-13 text-center line-height">
+    <div class="bio font-bio text-center line-height">
       <div class="col-center">
-        <h1 class="bold font-13 text-center">ABOUT</h1>
+        <h1 class="bold font-bio text-center">ABOUT</h1>
         Always passionate about fashion and photography, after his studies in cultural anthropology at the University of
         Turin, Alberto – born 1993 –
         began traveling to Asia alone, backpacking with his camera in hand.<br> On his return he settled in Milan, where
@@ -51,6 +51,7 @@
   </div>
 
   <div class="contacts-container" (click)="openContacts()">
+    <div class=" col-center"></div>
     <ul class="contacts">
       <li class="bold font-13">
         CONTACTS

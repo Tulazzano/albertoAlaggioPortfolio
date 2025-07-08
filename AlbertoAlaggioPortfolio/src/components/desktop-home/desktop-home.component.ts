@@ -136,13 +136,13 @@ export class DesktopHomeComponent {
 
   calculatePosition(){
 
-    const top = this.imgContainer.nativeElement.offsetTop
-    const imgCont: HTMLElement | null = document.getElementById('imgCont');
-    const imgBtn: HTMLElement | null = document.getElementById('imgBtn');
-    imgCont!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-    imgBtn!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
-    imgBtn!.style.setProperty('top', top.toString() + 'px');
-    console.log(this.imgContainer.nativeElement.clientHeight)
+    // const top = this.imgContainer.nativeElement.offsetTop
+    // const imgCont: HTMLElement | null = document.getElementById('imgCont');
+    // const imgBtn: HTMLElement | null = document.getElementById('imgBtn');
+    // imgCont!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
+    // imgBtn!.style.setProperty('height', (this.imgContainer.nativeElement.clientHeight).toString() + 'px');
+    // imgBtn!.style.setProperty('top', top.toString() + 'px');
+    // console.log(this.imgContainer.nativeElement.clientHeight)
 
   }
 
